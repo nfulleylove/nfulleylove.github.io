@@ -1,0 +1,17 @@
+﻿@using Portfolio.Components.SocialLinks
+@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="Themes.Light" />
+<MudDialogProvider CloseOnEscapeKey="true"
+                   CloseButton="true"
+                   MaxWidth="MaxWidth.Small"
+                   FullWidth="true" />
+
+<MudLayout>
+    <MudMainContent Class="pt-0">
+        <SocialLinkBar />
+        <MudContainer>
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>

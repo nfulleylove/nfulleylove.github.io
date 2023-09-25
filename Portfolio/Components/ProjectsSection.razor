@@ -1,0 +1,55 @@
+﻿<MudText Typo="Typo.h4"
+         Class="section-title"
+         Color="Color.Primary">
+    Projects
+</MudText>
+
+<MudDataGrid T="Project"
+             Items="Projects?.OrderByDescending(x => x.StartDate)"
+             SortMode="SortMode.None"
+             Filterable="false"
+             Elevation="0"
+             Style="background-color:transparent;"
+             Breakpoint="Breakpoint.None">
+    <Columns>
+        <PropertyColumn Title="Dates Worked" Property="x => x.Dates" />
+        <TemplateColumn Title="Name">
+            <CellTemplate>
+                <MudLink OnClick="() => ShowProjectDetails(context.Item)">
+                    @context.Item.Name
+                </MudLink>
+            </CellTemplate>
+        </TemplateColumn>
+        <PropertyColumn Title="Company" Property="x => x.Company" HideSmall="true" />
+        <TemplateColumn Title="Link" HideSmall="true">
+            <CellTemplate>
+                @if (context.Item.HasLink)
+                {
+                    <MudChip Href="@context.Item.Href"
+                             Target="_blank"
+                             Variant="Variant.Filled"
+                             Color="Color.Secondary">
+                        <MudIcon Icon="@Icons.Material.Filled.OpenInNew" />
+                    </MudChip>
+                }
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+</MudDataGrid>
+
+@code {
+    [Parameter] public IEnumerable<Project> Projects { get; set; } = Array.Empty<Project>();
+    [Inject] IDialogService DialogueService { get; set; } = default!;
+
+    private void ShowProjectDetails(Project project)
+    {
+        DialogParameters<ProjectDetailsDialogue> parameters = new()
+        {
+            { x => x.Project, project }
+        };
+
+        DialogueService.Show<ProjectDetailsDialogue>(
+            project.Name,
+            parameters);
+    }
+}

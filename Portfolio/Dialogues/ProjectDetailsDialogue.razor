@@ -1,0 +1,92 @@
+﻿@* Escape key only works on focus *@
+<MudFocusTrap>
+    <MudDialog>
+        <DialogContent>
+            <MudGrid Class="pb-8">
+                <MudItem xs="12">
+                    <dl>
+                        <MudGrid>
+                            <MudItem xs="6">
+                                <dt>
+                                    Dates
+                                </dt>
+
+                                <dd>
+                                    <MudText>
+                                        @Project.Dates
+                                    </MudText>
+                                </dd>
+                            </MudItem>
+
+                            <MudItem xs="6">
+                                <dt>
+                                    Company
+                                </dt>
+
+                                <dd>
+                                    <MudText>
+                                        @Project.Company
+                                    </MudText>
+                                </dd>
+                            </MudItem>
+
+                            <MudItem xs="6">
+                                <dt>
+                                    Technologies
+                                </dt>
+
+                                <dd>
+                                    <MudChipSet>
+                                        @foreach (string technology in Project.Technologies)
+                                        {
+                                            <MudChip Text="@technology"
+                                                     Color="Color.Secondary" />
+                                        }
+                                    </MudChipSet>
+                                </dd>
+                            </MudItem>
+
+                            <MudItem xs="6">
+                                @if (Project.HasLink)
+                                {
+                                    <dt>
+                                        Link
+                                    </dt>
+
+                                    <dd>
+                                        <MudChip Href="@Project.Href"
+                                                 Variant="Variant.Filled"
+                                                 Color="Color.Secondary">
+                                            <MudIcon Icon="@Icons.Material.Filled.OpenInNew" />
+                                        </MudChip>
+                                    </dd>
+                                }
+                            </MudItem>
+
+                            <MudItem xs="12">
+                                <dt>
+                                    Details
+                                </dt>
+
+                                <dd>
+                                    <MudText>
+                                        @((MarkupString)Project.Description)
+                                    </MudText>
+                                </dd>
+                            </MudItem>
+                        </MudGrid>
+                    </dl>
+                </MudItem>
+            </MudGrid>
+        </DialogContent>
+    </MudDialog>
+</MudFocusTrap>
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+    [Parameter] public Project Project { get; set; } = new();
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+}
+

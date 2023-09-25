@@ -1,0 +1,23 @@
+﻿@page "/"
+
+<MudGrid Justify="Justify.Center"
+         Class="text-center">
+    <MudItem xs="12" Class="mx-8">
+        <HeroSection />
+    </MudItem>
+
+    <MudItem xs="12" Class="mb-8">
+        <AboutMeSection />
+    </MudItem>
+
+    <MudItem xs="12">
+        <ProjectsSection Projects="_projects" />
+    </MudItem>
+</MudGrid>
+
+@code {
+    private IEnumerable<Project> _projects =
+        Projects.AllProjects
+            .Where(x => x.IsFeatured)
+            .Take(5);
+}
