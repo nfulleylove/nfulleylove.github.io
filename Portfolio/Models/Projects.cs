@@ -52,7 +52,7 @@ internal static class Projects
             Company = "Gratte Brothers",
             StartDate = new DateOnly(2023,1,1),
             Description = "<p>Asset Tracker is a web application used to store, manage details, and audit changes for the assets in an organisation.<br><br>" +
-            "IT is able to view device and supplier information, and assign/unassign them to employees, notifying the users if necessary.</p>",
+            "The IT department is able to view device and supplier information, and assign/unassign them to employees, notifying the users if necessary.</p>",
             Name = "Asset Tracker",
             Technologies = new string[] { "C#", "Blazor", "EF Core", "Azure" },
             IsFeatured = true
