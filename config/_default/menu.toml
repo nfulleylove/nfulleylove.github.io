@@ -1,0 +1,24 @@
+# Configure main menu and social menu
+#[[main]]
+#identifier = "home"
+#name = "Home"
+#url = "/"
+#[main.params]
+#icon = "home"
+#newtab = true
+
+[[social]]
+identifier = "linkedin"
+name = "LinkedIn"
+url = "https://uk.linkedin.com/in/nathanfulleylove"
+
+[social.params]
+icon = "brand-linkedin"
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/nfulleylove"
+
+[social.params]
+icon = "brand-github"
