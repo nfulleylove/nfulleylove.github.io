@@ -7,9 +7,7 @@ menu:
       icon: book
 ---
 
-Hello! :wave:
-
-I'm a software developer who enjoys building straightforward, purposeful solutions that save time, reduce complexity, and provide a better experience for everyone involved.
+I'm a software developer experienced in developing and maintaining web applications and APIs, exposure to cloud technologies, and mobile applications.
 
 This site is where I document what I’m learning – including the technology I'm working with, side projects, and observations from both work and life.
 

@@ -13,7 +13,7 @@ published = "02/01/2006"
 lastUpdated = "02/01/2006 15:04 GMT"
 
 [sidebar]
-subtitle = "The experiences of a software developer."
+subtitle = "The experiences in the life of a software developer."
 
 [sidebar.avatar]
 enabled = true
@@ -34,22 +34,22 @@ default = "Licensed under CC BY-NC-SA 4.0"
 type = "search"
 
 [[widgets.homepage]]
-type = "posts"
+type = "archives"
 
-[widgets.homepage.params]
-limit = 5
+    [widgets.homepage.params]
+    limit = 5
 
 [[widgets.homepage]]
 type = "categories"
 
-[widgets.homepage.params]
-limit = 10
+    [widgets.homepage.params]
+    limit = 10
 
 [[widgets.homepage]]
 type = "tag-cloud"
 
-[widgets.homepage.params]
-limit = 10
+    [widgets.homepage.params]
+    limit = 10
 
 [[widgets.page]]
 type = "toc"
