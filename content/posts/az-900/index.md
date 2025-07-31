@@ -5,7 +5,7 @@ draft: false
 tags: ["Azure", "Certification", "AZ-900"]
 categories: ["Cloud", "Study"]
 summary: "How I studied for and passed the AZ-900 Microsoft Azure Fundamentals exam."
-image: "images/banner.png"
+image: "images/az-900-banner.png"
 ---
 
 ![My AZ-900 Certificate 📜](images/certificate.png)

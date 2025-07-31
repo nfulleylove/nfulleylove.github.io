@@ -4,7 +4,7 @@ date: 2025-07-30
 draft: false
 tags: ["Azure", "APIM"]
 categories: ["Cloud", "API"]
-image: "images/banner.png"
+image: "images/apim-banner.png"
 ---
 
 > ℹ️ This is a hands-on, surface-level overview of Azure APIM, based on my brief experience working with it as a developer.
