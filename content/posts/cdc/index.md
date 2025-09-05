@@ -107,7 +107,11 @@ EXEC sys.sp_cdc_enable_db;
 
 Ensure that you are in the correct database before you execute it.
 
-![Enabling CDC for the Shop database](images/enable-cdc-database.gif)
+{{< video-with-caption
+ autoplay="true"
+ loop="true"
+ src="videos/enable-cdc-database.mp4"
+ caption="Enabling CDC for the Shop database" >}}
 
 To disable CDC for the database, use the following SQL:
 
@@ -136,7 +140,11 @@ The first three parameters of the `sp_cdc_enable_table` stored procedure are req
 
 > ⚠️ When using the `captured_column_list`, columns used to uniquely identify a row must be included (typically the PK).
 
-![Enabling CDC for the Product table](images/enable-cdc-table.gif)
+{{< video-with-caption
+ autoplay="true"
+ loop="true"
+ src="videos/enable-cdc-table.mp4"
+ caption="Enabling CDC for the Product table" >}}
 
 In this example, CDC has been enabled on the `Product` table, and any changes to the `Id`, `Name`, or `Price` fields will be tracked.
 
@@ -198,7 +206,11 @@ VALUES
 );
 ```
 
-![Inserting a product into the Product table](images/insert-product.gif)
+{{< video-with-caption
+ autoplay="true"
+ loop="true"
+ src="videos/insert-product.mp4"
+ caption="Inserting a product into the Product table" >}}
 
 The `Id`, `Name`, and `Price` columns are tracked, so we should see a change in the change table.
 
@@ -209,7 +221,11 @@ SELECT *
 FROM cdc.dbo_Product_CT
 ```
 
-![Change is captured in the change table](images/insert-result-cdc-table.gif)
+{{< video-with-caption
+ autoplay="true"
+ loop="true"
+ src="videos/insert-result-cdc-table.mp4"
+ caption="Change is captured in the change table" >}}
 
 We can see a row has been inserted into the change table.
 
@@ -240,7 +256,11 @@ SET [Description] += N' with free backup software (3 month trial)'
 WHERE [Id] = 7;
 ```
 
-![Update is not captured in the change table](images/update-not-captured-result-cdc-table.gif)
+{{< video-with-caption
+ autoplay="true"
+ loop="true"
+ src="videos/update-not-captured-result-cdc-table.mp4"
+ caption="Update is not captured in the change table" >}}
 
 ### Deleting a Product
 
