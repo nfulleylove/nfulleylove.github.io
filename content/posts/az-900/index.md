@@ -5,6 +5,8 @@ draft: false
 tags: ["Azure", "Certification", "AZ-900"]
 categories: ["Cloud", "Study"]
 summary: "How I studied for and passed the AZ-900 Microsoft Azure Fundamentals exam."
+description: "A walkthrough of my journey studying for and passing the AZ-900 Microsoft Azure Fundamentals exam, including study resources, exam experience, and my next steps in cloud certification."
+
 image: "images/az-900-banner.png"
 ---
 

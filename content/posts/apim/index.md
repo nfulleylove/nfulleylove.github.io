@@ -5,6 +5,8 @@ draft: false
 tags: ["Azure", "APIM"]
 categories: ["Cloud", "API"]
 image: "images/apim-banner.png"
+summary: "An overview of APIM, from my exposure as a developer."
+description: "A hands-on walkthrough of Azure API Management (APIM), covering key concepts, request flow, and how to set up APIs, products, subscriptions, and policies in the Azure Portal."
 ---
 
 > ℹ️ This is a hands-on, surface-level overview of Azure APIM, based on my brief experience working with it as a developer.
